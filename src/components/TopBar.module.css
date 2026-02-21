@@ -1,0 +1,74 @@
+.topbar {
+  height: 52px;
+  background: var(--ui-surface);
+  border-bottom: 1px solid var(--ui-border);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+}
+.topbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,135,58,0.25), transparent);
+}
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--ui-accent);
+  text-transform: uppercase;
+}
+.center {
+  display: flex;
+  gap: 4px;
+}
+.tabPill {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  color: var(--ui-muted);
+  border-radius: 100px;
+  transition: all 0.2s;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+}
+.tabPill:hover { color: var(--ui-text); }
+.tabPill.active {
+  background: rgba(212,135,58,0.13);
+  color: var(--ui-accent);
+}
+.actions { display: flex; gap: 8px; }
+.btn {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  border: 1px solid var(--ui-border);
+  background: transparent;
+  color: var(--ui-muted);
+  transition: all 0.2s;
+  border-radius: 3px;
+}
+.btn:hover { color: var(--ui-text); border-color: var(--ui-muted); }
+.primary {
+  background: var(--ui-accent);
+  color: #0e0c0a;
+  border-color: var(--ui-accent);
+  font-weight: 700;
+}
+.primary:hover { opacity: 0.85; }
