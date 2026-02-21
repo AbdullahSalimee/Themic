@@ -37,6 +37,10 @@ export const DEFAULT_STATE = {
   pattern:'solid', transSpeed:'0.2s',
   bodyOp:65, cardOp:60,
   liftOn:true, glowOn:false, gradText:false, blurNav:false, italic:false,
+  // Type scale
+  baseSize:16, hwt:900, bwt:400, ls:0, lh:1.75,
+  // Spacing
+  gap:2.5, pad:1.2, pvpad:2.5,
 };
 
 // ── PATTERNS ──
