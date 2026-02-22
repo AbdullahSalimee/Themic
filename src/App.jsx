@@ -8,7 +8,7 @@ export default function App() {
   const [S, setS] = useState({ ...DEFAULT_STATE });
   const [activeTab, setActiveTab] = useState('colors');
   const [exportLabel, setExportLabel] = useState('↓ Export CSS');
-
+const [burgerOpen, setBurgerOpen] = useState(false);
   const update = useCallback((changes) => {
     setS(prev => ({ ...prev, ...changes }));
   }, []);
@@ -74,8 +74,15 @@ export default function App() {
         onReset={resetAll}
         onExport={exportCSS}
         exportLabel={exportLabel}
+        burgerOpen={burgerOpen}
+        setBurgerOpen={setBurgerOpen}
       />
-      <div style={{ display:'grid', gridTemplateColumns:'360px 1fr', height:'calc(100vh - 52px)', overflow:'hidden' }}>
+      <div
+        
+      
+  className="grid h-[calc(100vh-52px)] overflow-hidden lg:grid-cols-[360px_1fr]"
+
+   >
         <Panel
           S={S}
           update={update}

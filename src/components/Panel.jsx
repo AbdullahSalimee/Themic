@@ -14,12 +14,16 @@ const panelStyle = {
 
 export default function Panel({ S, update, activeTab, applyPalette, applyPreset }) {
   return (
-    <div style={panelStyle}>
-      {activeTab === 'colors'     && <ColorsTab     S={S} update={update} applyPalette={applyPalette} />}
-      {activeTab === 'type'       && <TypeTab        S={S} update={update} />}
-      {activeTab === 'components' && <ComponentsTab  S={S} update={update} />}
-      {activeTab === 'effects'    && <EffectsTab     S={S} update={update} />}
-      {activeTab === 'presets'    && <PresetsTab     S={S} applyPreset={applyPreset} />}
+    <div className=" lg:block hidden" style={panelStyle}>
+      {activeTab === "colors" && (
+        <ColorsTab S={S} update={update} applyPalette={applyPalette} />
+      )}
+      {activeTab === "type" && <TypeTab S={S} update={update} />}
+      {activeTab === "components" && <ComponentsTab S={S} update={update} />}
+      {activeTab === "effects" && <EffectsTab S={S} update={update} />}
+      {activeTab === "presets" && (
+        <PresetsTab S={S} applyPreset={applyPreset} />
+      )}
     </div>
   );
 }
